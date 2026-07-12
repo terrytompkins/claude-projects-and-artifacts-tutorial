@@ -1,0 +1,372 @@
+{
+  "productMetadata": {
+    "productName": "Pet Care Coach",
+    "purpose": "Educational prototype demonstrating generative AI product-design techniques",
+    "isFictional": true,
+    "version": "1.0.0-demo",
+    "lastUpdated": "2026-07-01T09:00:00-04:00"
+  },
+  "personas": [
+    {
+      "personaId": "persona-jordan-lee",
+      "name": "Jordan Lee",
+      "role": "Pet owner",
+      "linkedOwnerId": "owner-jordan-lee"
+    },
+    {
+      "personaId": "persona-maya-chen",
+      "name": "Dr. Maya Chen",
+      "role": "Veterinarian",
+      "linkedStaffId": "staff-maya-chen"
+    },
+    {
+      "personaId": "persona-alex-rivera",
+      "name": "Alex Rivera",
+      "role": "Veterinary technician",
+      "linkedStaffId": "staff-alex-rivera"
+    },
+    {
+      "personaId": "persona-sam-patel",
+      "name": "Sam Patel",
+      "role": "Product manager and QA reviewer",
+      "linkedStaffId": null
+    }
+  ],
+  "owner": {
+    "ownerId": "owner-jordan-lee",
+    "name": "Jordan Lee",
+    "preferredName": "Jordan",
+    "communicationPreference": "concise explanations with clear next actions",
+    "sourceType": "clinic-record",
+    "approvalStatus": "n/a",
+    "generatedBy": "system-seed",
+    "lastUpdated": "2026-07-01T09:00:00-04:00"
+  },
+  "pet": {
+    "petId": "pet-bailey",
+    "name": "Bailey",
+    "species": "Dog",
+    "breed": "Labrador Retriever",
+    "ageYears": 6,
+    "weightLbs": 68,
+    "sex": "Female",
+    "spayedNeutered": true,
+    "knownSensitivities": ["rich or fatty food"],
+    "primaryClinicId": "clinic-pine-ridge",
+    "sourceType": "clinic-record",
+    "approvalStatus": "n/a",
+    "generatedBy": "system-seed",
+    "lastUpdated": "2026-07-01T09:00:00-04:00"
+  },
+  "clinic": {
+    "clinicId": "clinic-pine-ridge",
+    "name": "Pine Ridge Veterinary Clinic",
+    "sourceType": "clinic-record",
+    "approvalStatus": "n/a",
+    "generatedBy": "system-seed",
+    "lastUpdated": "2026-07-01T09:00:00-04:00"
+  },
+  "staffMembers": [
+    {
+      "staffId": "staff-maya-chen",
+      "name": "Dr. Maya Chen",
+      "role": "veterinarian",
+      "clinicId": "clinic-pine-ridge",
+      "sourceType": "clinic-record",
+      "approvalStatus": "n/a",
+      "generatedBy": "system-seed",
+      "lastUpdated": "2026-07-01T09:00:00-04:00"
+    },
+    {
+      "staffId": "staff-alex-rivera",
+      "name": "Alex Rivera",
+      "role": "technician",
+      "clinicId": "clinic-pine-ridge",
+      "sourceType": "clinic-record",
+      "approvalStatus": "n/a",
+      "generatedBy": "system-seed",
+      "lastUpdated": "2026-07-01T09:00:00-04:00"
+    }
+  ],
+  "careEpisode": {
+    "episodeId": "episode-bailey-2026-07",
+    "petId": "pet-bailey",
+    "ownerId": "owner-jordan-lee",
+    "status": "home-care",
+    "currentStageId": "home-care",
+    "isFictionalDemoData": true,
+    "initialConcern": "Bailey vomited twice, seemed less energetic than usual, and did not finish breakfast.",
+    "sourceType": "ai-generated-summary",
+    "approvalStatus": "unapproved",
+    "generatedBy": "ai",
+    "createdAt": "2026-07-14T18:05:00-04:00",
+    "lastUpdated": "2026-07-16T08:00:00-04:00"
+  },
+  "journeyStages": [
+    { "stageId": "concern", "label": "Notice a Concern", "order": 1 },
+    { "stageId": "conversation", "label": "Describe the Symptoms", "order": 2 },
+    { "stageId": "triage", "label": "Determine the Next Step", "order": 3 },
+    { "stageId": "scheduling", "label": "Schedule the Visit", "order": 4 },
+    { "stageId": "clinic", "label": "Clinic Evaluation", "order": 5 },
+    { "stageId": "home-care", "label": "Follow the Care Plan", "order": 6 },
+    { "stageId": "follow-up", "label": "Monitor and Follow Up", "order": 7 }
+  ],
+  "conversation": {
+    "conversationId": "conv-bailey-2026-07-01",
+    "episodeId": "episode-bailey-2026-07",
+    "startedAt": "2026-07-14T18:05:00-04:00",
+    "endedAt": "2026-07-14T18:11:00-04:00",
+    "sourceType": "ai-generated-summary",
+    "approvalStatus": "unapproved",
+    "generatedBy": "ai",
+    "lastUpdated": "2026-07-14T18:11:00-04:00",
+    "messages": [
+      {
+        "messageId": "msg-001",
+        "sender": "owner",
+        "text": "Bailey vomited twice this morning and didn't finish her breakfast.",
+        "timestamp": "2026-07-14T18:05:30-04:00"
+      },
+      {
+        "messageId": "msg-002",
+        "sender": "system",
+        "text": "I'm sorry to hear that. Has Bailey's energy level changed today compared to usual?",
+        "timestamp": "2026-07-14T18:06:00-04:00"
+      },
+      {
+        "messageId": "msg-003",
+        "sender": "owner",
+        "text": "Yes, she seems less energetic than usual.",
+        "timestamp": "2026-07-14T18:06:45-04:00"
+      }
+    ]
+  },
+  "triageSummary": {
+    "triageId": "triage-bailey-2026-07-01",
+    "episodeId": "episode-bailey-2026-07",
+    "escalationLevel": "prompt-non-emergency",
+    "recommendedNextStep": "scheduling",
+    "sourceType": "ai-generated-summary",
+    "approvalStatus": "unapproved",
+    "generatedBy": "ai",
+    "generatedAt": "2026-07-14T18:11:30-04:00",
+    "lastUpdated": "2026-07-14T18:11:30-04:00"
+  },
+  "appointment": {
+    "appointmentId": "appt-bailey-2026-07-15",
+    "episodeId": "episode-bailey-2026-07",
+    "clinicId": "clinic-pine-ridge",
+    "dateTime": "2026-07-15T14:30:00-04:00",
+    "visitType": "same-day-illness",
+    "status": "completed",
+    "sourceType": "clinic-record",
+    "approvalStatus": "confirmed",
+    "generatedBy": "clinic-staff",
+    "lastUpdated": "2026-07-15T14:30:00-04:00"
+  },
+  "clinicVisit": {
+    "visitId": "visit-bailey-2026-07-15",
+    "appointmentId": "appt-bailey-2026-07-15",
+    "staffId": "staff-maya-chen",
+    "isFictionalDemoData": true,
+    "examNotes": "Physical examination completed. Mild dehydration observed.",
+    "treatmentSummary": "Fluids administered at the clinic. Veterinarian-approved anti-nausea medication provided. Temporary bland-diet instructions provided. Activity and symptom-monitoring instructions provided.",
+    "sourceType": "clinic-record",
+    "approvalStatus": "clinician-entered",
+    "generatedBy": "staff-maya-chen",
+    "lastUpdated": "2026-07-15T15:45:00-04:00"
+  },
+  "diagnosticResults": [
+    {
+      "resultId": "diag-bailey-01",
+      "visitId": "visit-bailey-2026-07-15",
+      "category": "exam",
+      "finding": "Mild dehydration observed.",
+      "isFictionalDemoData": true,
+      "sourceType": "clinic-record",
+      "approvalStatus": "clinician-entered",
+      "generatedBy": "staff-maya-chen",
+      "lastUpdated": "2026-07-15T15:45:00-04:00"
+    },
+    {
+      "resultId": "diag-bailey-02",
+      "visitId": "visit-bailey-2026-07-15",
+      "category": "imaging",
+      "finding": "Abdominal imaging did not show evidence of an obstructive foreign object.",
+      "isFictionalDemoData": true,
+      "sourceType": "clinic-record",
+      "approvalStatus": "clinician-entered",
+      "generatedBy": "staff-maya-chen",
+      "lastUpdated": "2026-07-15T15:45:00-04:00"
+    },
+    {
+      "resultId": "diag-bailey-03",
+      "visitId": "visit-bailey-2026-07-15",
+      "category": "lab",
+      "finding": "Laboratory results did not identify a critical abnormality.",
+      "isFictionalDemoData": true,
+      "sourceType": "clinic-record",
+      "approvalStatus": "clinician-entered",
+      "generatedBy": "staff-maya-chen",
+      "lastUpdated": "2026-07-15T15:45:00-04:00"
+    }
+  ],
+  "carePlan": {
+    "carePlanId": "careplan-bailey-2026-07-15",
+    "visitId": "visit-bailey-2026-07-15",
+    "approvedBy": "staff-maya-chen",
+    "approvedAt": "2026-07-15T15:50:00-04:00",
+    "instructionsSummary": "Bland-diet, hydration, calm activity, and monitoring instructions with scheduled follow-up.",
+    "sourceType": "veterinarian-approved",
+    "approvalStatus": "approved",
+    "generatedBy": "staff-maya-chen",
+    "lastUpdated": "2026-07-15T15:50:00-04:00"
+  },
+  "careTasks": [
+    {
+      "taskId": "task-medication",
+      "carePlanId": "careplan-bailey-2026-07-15",
+      "description": "Give the veterinarian-approved medication according to the clinic label.",
+      "status": "completed",
+      "completedAt": "2026-07-15T18:00:00-04:00",
+      "sourceType": "veterinarian-approved",
+      "approvalStatus": "approved",
+      "generatedBy": "staff-maya-chen",
+      "lastUpdated": "2026-07-15T18:00:00-04:00"
+    },
+    {
+      "taskId": "task-water",
+      "carePlanId": "careplan-bailey-2026-07-15",
+      "description": "Offer access to water and follow the clinic's hydration instructions.",
+      "status": "completed",
+      "completedAt": "2026-07-15T18:05:00-04:00",
+      "sourceType": "veterinarian-approved",
+      "approvalStatus": "approved",
+      "generatedBy": "staff-maya-chen",
+      "lastUpdated": "2026-07-15T18:05:00-04:00"
+    },
+    {
+      "taskId": "task-small-meals",
+      "carePlanId": "careplan-bailey-2026-07-15",
+      "description": "Offer small meals according to the veterinarian-approved diet instructions.",
+      "status": "in-progress",
+      "completedAt": null,
+      "sourceType": "veterinarian-approved",
+      "approvalStatus": "approved",
+      "generatedBy": "staff-maya-chen",
+      "lastUpdated": "2026-07-15T19:00:00-04:00"
+    },
+    {
+      "taskId": "task-activity",
+      "carePlanId": "careplan-bailey-2026-07-15",
+      "description": "Keep activity calm for the remainder of the day.",
+      "status": "completed",
+      "completedAt": "2026-07-15T20:00:00-04:00",
+      "sourceType": "veterinarian-approved",
+      "approvalStatus": "approved",
+      "generatedBy": "staff-maya-chen",
+      "lastUpdated": "2026-07-15T20:00:00-04:00"
+    },
+    {
+      "taskId": "task-monitor",
+      "carePlanId": "careplan-bailey-2026-07-15",
+      "description": "Monitor vomiting, energy, water intake, appetite, and other changes identified by the clinic.",
+      "status": "in-progress",
+      "completedAt": null,
+      "sourceType": "veterinarian-approved",
+      "approvalStatus": "approved",
+      "generatedBy": "staff-maya-chen",
+      "lastUpdated": "2026-07-16T08:00:00-04:00"
+    },
+    {
+      "taskId": "task-followup",
+      "carePlanId": "careplan-bailey-2026-07-15",
+      "description": "Complete the scheduled clinic follow-up or contact the clinic sooner when escalation criteria are met.",
+      "status": "not-started",
+      "completedAt": null,
+      "sourceType": "veterinarian-approved",
+      "approvalStatus": "approved",
+      "generatedBy": "staff-maya-chen",
+      "lastUpdated": "2026-07-15T15:50:00-04:00"
+    }
+  ],
+  "followUpQuestions": [
+    {
+      "questionId": "fu-bailey-01",
+      "episodeId": "episode-bailey-2026-07",
+      "question": "Is it okay that Bailey is drinking more water than usual?",
+      "answer": "That's expected while she rehydrates. Keep following the clinic's hydration instructions, and let the clinic know if she seems unable to keep water down.",
+      "answeredBy": "ai",
+      "escalationFlag": false,
+      "sourceType": "ai-generated-summary",
+      "approvalStatus": "unapproved",
+      "generatedBy": "ai",
+      "lastUpdated": "2026-07-15T21:00:00-04:00"
+    },
+    {
+      "questionId": "fu-bailey-02",
+      "episodeId": "episode-bailey-2026-07",
+      "question": "Bailey seems to be back to her normal energy level today, is that a good sign?",
+      "answer": "Improving energy is a good sign to note for your follow-up visit. Continue the care plan as approved by Dr. Chen.",
+      "answeredBy": "ai",
+      "escalationFlag": false,
+      "sourceType": "ai-generated-summary",
+      "approvalStatus": "unapproved",
+      "generatedBy": "ai",
+      "lastUpdated": "2026-07-16T09:00:00-04:00"
+    },
+    {
+      "questionId": "fu-bailey-03",
+      "episodeId": "episode-bailey-2026-07",
+      "question": "Bailey vomited again this morning, should I be worried?",
+      "answer": "This has been flagged for the clinic. Please contact Pine Ridge Veterinary Clinic now to discuss next steps.",
+      "answeredBy": "ai",
+      "escalationFlag": true,
+      "sourceType": "ai-generated-summary",
+      "approvalStatus": "unapproved",
+      "generatedBy": "ai",
+      "lastUpdated": "2026-07-16T09:30:00-04:00"
+    }
+  ],
+  "sourceReferences": [
+    {
+      "sourceRefId": "srcref-triage-01",
+      "relatedRecordId": "triage-bailey-2026-07-01",
+      "sourceType": "ai-generated-summary",
+      "approvalStatus": "unapproved",
+      "generatedBy": "ai",
+      "lastUpdated": "2026-07-14T18:11:30-04:00"
+    },
+    {
+      "sourceRefId": "srcref-careplan-01",
+      "relatedRecordId": "careplan-bailey-2026-07-15",
+      "sourceType": "veterinarian-approved",
+      "approvalStatus": "approved",
+      "generatedBy": "staff-maya-chen",
+      "lastUpdated": "2026-07-15T15:50:00-04:00"
+    },
+    {
+      "sourceRefId": "srcref-diag-01",
+      "relatedRecordId": "diag-bailey-01",
+      "sourceType": "clinic-record",
+      "approvalStatus": "clinician-entered",
+      "generatedBy": "staff-maya-chen",
+      "lastUpdated": "2026-07-15T15:45:00-04:00"
+    }
+  ],
+  "acceptanceCriteriaReferences": [
+    "AC-F002-01",
+    "AC-F004-01",
+    "AC-F007-01",
+    "AC-F010-01",
+    "AC-F011-02"
+  ],
+  "demoMetrics": {
+    "totalCareEpisodes": 1,
+    "careTasksCompleted": 3,
+    "careTasksTotal": 6,
+    "followUpQuestionsLogged": 3,
+    "followUpQuestionsEscalated": 1,
+    "lastUpdated": "2026-07-16T09:30:00-04:00"
+  }
+}
